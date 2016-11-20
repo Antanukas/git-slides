@@ -35,8 +35,8 @@
 
                 - Java Technologijų kurso apžvalga
                 - Versijų kontrolės istorija
-                - Git įvadas
-                - Resursai/Namų darbai
+                - Git versijų kontrolė
+                - Šaltiniai/Namų darbai
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -67,7 +67,7 @@
                 ## Versijų kontrolė
 
                 - Angliškai - version control, revision control, source control
-                - Skirta suvaldyti pakeitimus atliekamus kelių vartotojų grupei dokumentų
+                - Skirta suvaldyti dokumentų pakeitimus, kuriuos atlieka keli vartotojai
                 - Įsiviazduokite, jog visi turite įrašyti savo vardą į tą patį tekstinį failą
             </script>
         </section>
@@ -84,6 +84,11 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
+              ![gitbranches](branches.png "Git Status")
+            </script>
+        </section>
+        <section data-markdown data-background-image="sbg.png">
+            <script type="text/template">
                 `$ git help <command>`
 
                 Komandos ir jos parametrų aprašymas
@@ -91,14 +96,16 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                `$ git init` - paruošia dabartinį katalogą kaip git reositorija
+                `$ git init` - paruošia dabartinį katalogą kaip git repositoriją
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
                 `$ git add <path>`
 
-                Populiaru pridėti viską is dabartinio katalogo: `$ git add .`
+                Pridėti viską iš dabartinio katalogo:
+
+                ```$ git add .```
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -110,15 +117,15 @@
             <script type="text/template">
               ![gitstatus](gitstatus.png "Git Status")
 
-              Sucommitinti bus žalių failų pakeitimai
+              Bus "sucommitinti" žalių failų pakeitimai
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
                 `$ git commit -m <message>`
 
-                Komanda atliekama pabaigus darbą ar jo etapą su failais.
-                Susikuria changeset'as turintis informaciją apie pasikeitusius failus.
+                Komanda, atliekama pabaigus darbą ar jo etapą su failais.
+                Susikuria changeset'as, turintis informaciją apie pasikeitusius failus.
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -135,19 +142,19 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė
+                ## Užduotis 1
 
                 - susikurkite katalogą: `studentai`
                 - inicijuokite jame git repositoriją
                 - sukurkite failą `studentai.dat`
                 - atverkite failą ir irašykite į jį savo vardą ir pavardę
-                - sucommitinkite pakeitimus
-                - peržvelkite ar istorijoje atsirado commitas
+                - "sucommitinkite" pakeitimus
+                - peržvelkite, ar istorijoje atsirado commit'as
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė - galimas sprendimas
+                ## Užduotis 1 - galimas sprendimas
 
                 ```
                 $ mkdir studentai
@@ -164,9 +171,9 @@
             <script type="text/template">
                 ## Šakos (branch)
 
-                - branch'as kuris sukuriamas pagal nutylėjimą - 'master'
-                - nauji branch'ai kuriami vartotojų
-                - branch'ai dažniausiai naudojami gaminant didesnį funkcionalumą norint perkelti jį į `master` branch'ą pilnai išbaigus
+                - pagal nutylėjimą sukuriamas "master branch'as"
+                - naujus branch'us kuria vartotojai
+                - kiekvienai programavimo užduočiai naudojami atskiri branch'ai. Pabaigtos užduoties pakeitimai perkeliami į "master" branch'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -190,7 +197,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                `$ git merge <branch-name>` - Atlikti merge commitą perkeliant nurodyto brancho pakeitimus į dabartinį
+                `$ git merge <branch-name>` - Atlikti merge commit'ą, perkeliant nurodyto branch'o pakeitimus į dabartinį branch'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -240,7 +247,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Git istorijos narsymas
+                ## Git istorijos naršymas
 
                 Dažnai labai patogu tai daryti grafiniais įrankiais
 
@@ -261,16 +268,16 @@
                 ## Git rodyklės (pointers)
 
                 - `HEAD` - dabartinės būsenos rodyklė
-                - Gudresni atvejai http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
+                - Gudresni pavyzdžiai http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Commito ID
+                ## Commit ID
 
                 - `52f192703d9951f5bbaa55fc41c0c78bba811a49`
-                - praktikoje unikaliai nusakyti pakanka 7 pirmų simbolių `52f1927`
-                - žinant commit'o id galima atlikti visokių veiksmų. Tarkime nukreiptį HEAD'ą į šį commit'ą
+                - unikaliai nusakyti commit'ą pakanka 7 pirmų simbolių `52f1927`
+                - žinant commit'o id, galima atlikti visokių veiksmų, pavyzdžiui nukreipti HEAD'ą į šį commit'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -298,7 +305,7 @@
 
               - Įvyksta kai ta pati failo vieta buvo modifikuota kelių vartotojų
               - Galimi `merge` ir `pull` komandų metu
-              - Ištaisius konfliktus failuose juos reikia add'inti ir sucommitin'ti nekeinčiant commit'o pranešimo
+              - Ištaisius konfliktus failuose, juos reikia add'inti ir "sucommitinti" nekeinčiant commit'o pranešimo
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -314,44 +321,44 @@
               >>>>>>> gimimo-vieta
               ```
 
-              - `<<<<<<<` ir `>>>>>>>` žymi pradžią ir pabaigą konfliktuojančios dalies
-              - `<<<<<<< HEAD` sako, jog konfliktuojantis blokas yra iš branch'o į kurį merginame
+              - `<<<<<<<` ir `>>>>>>>` žymi konfliktuojančios dalies pradžią ir pabaigą
+              - `<<<<<<< HEAD` nurodo, jog konfliktuojantis blokas yra iš branch'o, į kurį "merginame"
               - `=======` atskiria dalis tarp branch'ų
-              - `>>>>>>> gimimo-vieta` sako, jog dalis tarp `=======` ir `>>>>>>>` yra iš branch'o gimimo-vieta
+              - `>>>>>>> gimimo-vieta` nurodo, jog dalis tarp `=======` ir `>>>>>>>` yra iš branch'o `gimimo-vieta`
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotėlė
+              ## Užduotis 2
 
               - Įsitikinkite, kad esate `master` branch'e
               - Sukurkite branch'ą pavadinimu `gimimo-data`
               - Tame branch'e į failą studentai.dat naujoje eilutėje įrašykite savo gimimo datą
-              - Sucommitinkite
+              - "Sucommitinkite"
               - Grįžkite į `master` branch'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotėlė
+              ## Užduotis 2
 
               - Sukurkite branch'ą `gimimo-vieta`
               - Tame branch'e į failą studentai.dat naujoje eilutėje įrašykite savo gimimo vietą
-              - Sucommitinkite
+              - "Sucommitinkite"
               - Grįžkite į `master` branch'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotėlė
+              ## Užduotis 2
 
-              - Įmerginkite gimimo datos pakeitimus į master branch'ą
-              - Įmerginkite gimimo vietos pakeitimus į master branch'ą
+              - "Įmerginkite" gimimo datos pakeitimus į master branch'ą
+              - "Įmerginkite" gimimo vietos pakeitimus į master branch'ą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė - galimas sprendimas
+                ## Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git checkout -b gimimo-data
@@ -372,7 +379,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė - galimas sprendimas
+                ## Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git checkout -b gimimo-vieta
@@ -393,7 +400,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė - galimas sprendimas
+                ## Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git merge gimimo-data
@@ -412,7 +419,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotėlė - galimas sprendimas
+                ## Užduotis 2 - galimas sprendimas
 
                 ```
                 $ gedit studentai.dat # pataisome konfliktus faile
@@ -443,9 +450,9 @@
             <script type="text/template">
                 ## Decentralizacija
 
-                - Kiekviena gito repositorija yra kopija kažkurio laiko momento.
-                - Ji gali nepriklausomai vystitis
-                - Praktikoje dažniausiai yra Git Serveris, kuris yra centrinė repositorija (origin)
+                - Kiekviena Git'o repositorija yra kažkurio laiko momento kopija.
+                - Ji gali nepriklausomai vystytis
+                - Dažniausiai yra Git Serveris, kuris yra centrinė repositorija (origin)
                 - Populiariausi serveriai: https://github.com, https://gitlab.com, https://bitbucket.org
             </script>
         </section>
@@ -453,9 +460,9 @@
             <script type="text/template">
               ## Remote repositorijos
 
-              - Praktikoje būna viena centrinė remote repositorija vadinama 'origin'
-              - Kuriant naują git projektą ją reikia prisidėti pačiam (`git remote add`)
-              - Klonuojantis (`git clone`) egzistuojantį projektą ji pridedama automatiškai
+              - Dažniausiai būna viena centrinė remote repositorija, vadinama 'origin'
+              - Kuriant naują git repositoriją (`git init`) ją reikia prisidėti pačiam (`git remote add`)
+              - Klonuojant (`git clone`) egzistuojančią repositoriją, ji pridedama automatiškai
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -498,13 +505,14 @@
               ## pull vs fetch
 
               - fetch - atsisiunčia pakeitimus iš repositorijos, bet nepritaiko jų lokaliai kopijai
-              - pull - padaro ta pati ką fetch, bet pritiako gautus pakeitimos, ko pasekoje gali reikėti mergo
-                - techniskai git pull atveju vyksta tokia seka jei esame master'yje:
+              - pull - padaro tą patį, ką ir fetch, bet pritaiko gautus pakeitimus, o dėl to gali reikėti merge'o
+                - techniškai git pull atveju vyksta tokia komandų seka, jei esame master'yje:
                 ```
                 $ git fetch
                 $ git merge remotes/origin/master
                 ```
-              - praktikoje visada darome `git pull` ir nesipariname
+              - dažniausiai visada darome `git pull` ir nesukame galvos
+              - kad atsinaujintų visi branch'ai, galima daryti `git pull --all`
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
@@ -513,18 +521,18 @@
 
               `$ git push origin <branch-name>`
 
-              - jei remote'as pabėgęs į priekį bus atspausdinta klaida
-                - tokiu atveju reikia atlikti `git pull`, ispręsti merge konfliktus ir bandyti vėl
+              - jei remote'as pabėgęs į priekį, bus atspausdinta klaida
+                - tokiu atveju reikia atlikti `git pull`, ispręsti merge konfliktus ir bandyti dar kartą
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotis
+              ## Užduotis 3
 
-              - Susikurkite Githubo accounta
-              - Susikurkite Gihtube repositoriją
-              - Prisidėkite remotą
-              - Papushinkite į remotą
+              - Susikurkite Github'o vartotoją
+              - Susikurkite Gihtub'e repositoriją
+              - Prisidėkite remote'ą
+              - Perkelkite į Github'ą prieš tai užduotyse sukurtą repositoriją
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
