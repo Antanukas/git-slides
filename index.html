@@ -31,7 +31,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Turinys
+                #### Turinys
 
                 - Java Technologijų kurso apžvalga
                 - Versijų kontrolės istorija
@@ -41,7 +41,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Java Technologijų kurso apžvalga
+                #### Java Technologijų kurso apžvalga
 
                 - Gaminsime supaprastintą el. parduotuvės variantą
                 - Vartotojo sąsaja - Javascript + ReactJs + Bootstrap CSS
@@ -51,7 +51,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## El. Parduotuvės funkcijos
+                #### El. Parduotuvės funkcijos
 
                 - Peržiūrėti prekių pasiūlą
                 - Peržiūrėti prekės detales
@@ -64,7 +64,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Versijų kontrolė
+                #### Versijų kontrolė
 
                 - Angliškai - version control, revision control, source control
                 - Skirta suvaldyti dokumentų pakeitimus, kuriuos atlieka keli vartotojai
@@ -73,7 +73,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Versijų kontrolės kartos
+                #### Versijų kontrolės kartos
 
                 | Karta  | Tinklas        | Pvz |
                 |--------|----------------|-----------------------------------------|
@@ -142,7 +142,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 1
+                #### Užduotis 1
 
                 - susikurkite katalogą: `studentai`
                 - inicijuokite jame git repositoriją
@@ -154,7 +154,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 1 - galimas sprendimas
+                #### Užduotis 1 - galimas sprendimas
 
                 ```
                 $ mkdir studentai
@@ -169,7 +169,35 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Šakos (branch)
+                #### .gitignore
+
+                - dažnai turime failų, kurie neturi būti commit'inami
+                  - `.eclipse` konfigūracija
+                  - `target` katalogas atsirandantis build'o metu
+                  - kiti failai specifiniai konkrečiam vartotojui
+                - `.gitignore` tekstinis failas leidžia nurodyti šablonus kelių, kurie neturi būti tvarkomi Git'o
+            </script>
+        </section>
+        <section data-markdown data-background-image="sbg.png">
+            <script type="text/template">
+                #### .gitignore
+
+                ```
+                .gradle
+                /build/
+                !gradle/wrapper/gradle-wrapper.jar
+                h2
+                logs
+
+                target
+                *.iml
+                .idea
+                ```
+            </script>
+        </section>
+        <section data-markdown data-background-image="sbg.png">
+            <script type="text/template">
+                #### Šakos (branch)
 
                 - pagal nutylėjimą sukuriamas "master branch'as"
                 - naujus branch'us kuria vartotojai
@@ -247,7 +275,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Git istorijos naršymas
+                #### Git istorijos naršymas
 
                 Dažnai labai patogu tai daryti grafiniais įrankiais
 
@@ -265,7 +293,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Git rodyklės (pointers)
+                #### Git rodyklės (pointers)
 
                 - `HEAD` - dabartinės būsenos rodyklė
                 - Gudresni pavyzdžiai http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
@@ -273,7 +301,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Commit ID
+                #### Commit ID
 
                 - `52f192703d9951f5bbaa55fc41c0c78bba811a49`
                 - unikaliai nusakyti commit'ą pakanka 7 pirmų simbolių `52f1927`
@@ -301,7 +329,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Merge konfliktai
+              #### Merge konfliktai
 
               - Įvyksta kai ta pati failo vieta buvo modifikuota kelių vartotojų
               - Galimi `merge` ir `pull` komandų metu
@@ -310,7 +338,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Konflikto pavyzdys
+              #### Konflikto pavyzdys
 
               ```
               Jonas Petraitis
@@ -329,7 +357,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotis 2
+              #### Užduotis 2
 
               - Įsitikinkite, kad esate `master` branch'e
               - Sukurkite branch'ą pavadinimu `gimimo-data`
@@ -340,7 +368,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotis 2
+              #### Užduotis 2
 
               - Sukurkite branch'ą `gimimo-vieta`
               - Tame branch'e į failą studentai.dat naujoje eilutėje įrašykite savo gimimo vietą
@@ -350,7 +378,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotis 2
+              #### Užduotis 2
 
               - "Įmerginkite" gimimo datos pakeitimus į master branch'ą
               - "Įmerginkite" gimimo vietos pakeitimus į master branch'ą
@@ -358,7 +386,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 2 - galimas sprendimas
+                #### Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git checkout -b gimimo-data
@@ -379,7 +407,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 2 - galimas sprendimas
+                #### Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git checkout -b gimimo-vieta
@@ -400,7 +428,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 2 - galimas sprendimas
+                #### Užduotis 2 - galimas sprendimas
 
                 ```
                 $ git merge gimimo-data
@@ -419,7 +447,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Užduotis 2 - galimas sprendimas
+                #### Užduotis 2 - galimas sprendimas
 
                 ```
                 $ gedit studentai.dat # pataisome konfliktus faile
@@ -448,7 +476,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-                ## Decentralizacija
+                #### Decentralizacija
 
                 - Kiekviena Git'o repositorija yra kažkurio laiko momento kopija.
                 - Ji gali nepriklausomai vystytis
@@ -458,7 +486,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Remote repositorijos
+              #### Remote repositorijos
 
               - Dažniausiai būna viena centrinė remote repositorija, vadinama 'origin'
               - Kuriant naują git repositoriją (`git init`) ją reikia prisidėti pačiam (`git remote add`)
@@ -495,14 +523,14 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Lokalios repo sinchronizacija
+              #### Lokalios repo sinchronizacija
 
               `$ git pull` arba `$ git fetch`
             </script>
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## pull vs fetch
+              #### pull vs fetch
 
               - fetch - atsisiunčia pakeitimus iš repositorijos, bet nepritaiko jų lokaliai kopijai
               - pull - padaro tą patį, ką ir fetch, bet pritaiko gautus pakeitimus, o dėl to gali reikėti merge'o
@@ -517,7 +545,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Lokalių pakeitimų išstumimas į remote'ą
+              #### Lokalių pakeitimų išstumimas į remote'ą
 
               `$ git push origin <branch-name>`
 
@@ -527,7 +555,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Užduotis 3
+              #### Užduotis 3
 
               - Susikurkite Github'o vartotoją
               - Susikurkite Gihtub'e repositoriją
@@ -537,7 +565,7 @@
         </section>
         <section data-markdown data-background-image="sbg.png">
             <script type="text/template">
-              ## Pasimokyti patiems
+              #### Pasimokyti patiems
 
               - https://git-scm.com/book/en/v2
                 - Pirmi 2 skyriai is a MUST
